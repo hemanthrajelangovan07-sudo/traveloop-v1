@@ -1,0 +1,41 @@
+.my-trips { animation: fadeIn 0.4s ease; }
+
+.trips-filter { background: var(--surface); }
+.filter-input { background: transparent; border: none; outline: none; color: var(--text); flex: 1; font-size: 15px; }
+
+.trip-card { padding: 0; overflow: hidden; border-radius: 20px; }
+.trip-card-image { position: relative; height: 180px; }
+.trip-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.trip-card-overlay {
+  position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+  display: flex; flex-direction: column; padding: 16px; opacity: 0; transition: opacity 0.3s;
+}
+.trip-card:hover .trip-card-overlay { opacity: 1; }
+
+.trip-card-content { padding: 20px; }
+.trip-card-content h3 { font-size: 18px; }
+
+.trip-footer { border-top: 1px solid var(--border); }
+
+.mini-city-tag {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--surface2);
+  border: 2px solid var(--surface); display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 800; color: var(--text2);
+}
+.mini-city-tag.more { font-size: 9px; background: var(--border); color: var(--text3); }
+
+.trip-actions-dropdown { position: relative; }
+.dropdown-content {
+  position: absolute; right: 0; top: 100%; background: var(--surface2);
+  border: 1px solid var(--border); border-radius: 8px; width: 140px; padding: 6px;
+  display: none; flex-direction: column; gap: 4px; z-index: 10;
+}
+.trip-actions-dropdown:hover .dropdown-content { display: flex; }
+.dropdown-content a, .dropdown-content button {
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+  font-size: 13px; font-weight: 500; border-radius: 6px; transition: background 0.2s;
+  background: none; border: none; color: var(--text2); text-align: left; cursor: pointer;
+}
+.dropdown-content a:hover, .dropdown-content button:hover { background: var(--border); color: var(--text); }
+
+.-space-x-2 > * + * { margin-left: -10px; }

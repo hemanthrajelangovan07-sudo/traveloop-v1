@@ -1,0 +1,11 @@
+.checklist-page { animation: fadeIn 0.4s ease; }
+
+.check-item { transition: all 0.2s; }
+.check-item:hover .delete-btn { opacity: 1; }
+
+.cat-title { border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+
+@media(max-width: 640px) {
+  .add-item-form { flex-direction: column; }
+  .add-item-form select, .add-item-form button { width: 100%; }
+}

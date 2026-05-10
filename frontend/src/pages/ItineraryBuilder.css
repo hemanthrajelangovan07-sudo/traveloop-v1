@@ -1,0 +1,27 @@
+.itinerary-builder { animation: fadeIn 0.4s ease; }
+
+.empty-builder {
+  padding: 100px 20px; text-align: center; color: var(--text2);
+  cursor: pointer; transition: all 0.2s; border-style: dashed; border-width: 2px;
+}
+.empty-builder:hover { border-color: var(--primary); background: rgba(108,99,255,0.05); }
+.empty-builder svg { color: var(--border); margin-bottom: 24px; }
+
+.stop-item { margin-bottom: 40px; padding: 24px; }
+.stop-header { display: flex; gap: 20px; }
+.stop-img { width: 80px; height: 80px; border-radius: 12px; overflow: hidden; flex-shrink: 0; }
+.stop-img img { width: 100%; height: 100%; object-fit: cover; }
+.stop-main { flex: 1; }
+.stop-main h3 { font-size: 20px; color: var(--text); }
+
+.mini-act { background: var(--bg2); border: 1px solid var(--border); }
+
+.city-results { scrollbar-width: thin; }
+.city-result-item { border: 1px solid var(--border); }
+.city-result-item:hover { border-color: var(--primary); }
+
+@media(max-width: 640px) {
+  .stop-header { flex-direction: column; gap: 12px; }
+  .stop-img { width: 100%; height: 120px; }
+  .stop-details { grid-template-columns: 1fr; }
+}

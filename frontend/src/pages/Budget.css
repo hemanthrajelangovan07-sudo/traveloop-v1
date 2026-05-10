@@ -1,0 +1,20 @@
+.budget-page { animation: fadeIn 0.4s ease; }
+
+.budget-chart-wrap { position: relative; }
+.chart-box { position: relative; }
+.chart-center-label {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  text-align: center; pointer-events: none;
+}
+
+.budget-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.budget-table th { text-align: left; padding: 12px; color: var(--text3); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); }
+.budget-table td { padding: 16px 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.budget-table tr:last-child td { border-bottom: none; }
+
+.tip-item svg { flex-shrink: 0; }
+
+@media(max-width: 900px) {
+  .budget-chart-wrap { flex-direction: column; gap: 20px; align-items: center; }
+  .budget-table { display: block; overflow-x: auto; }
+}
