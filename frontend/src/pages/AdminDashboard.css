@@ -1,0 +1,8 @@
+.admin-dashboard { animation: fadeIn 0.4s ease; }
+
+.admin-table th { text-align: left; padding: 12px; font-size: 11px; text-transform: uppercase; color: var(--text3); border-bottom: 1px solid var(--border); }
+.admin-table td { padding: 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+
+@media(max-width: 768px) {
+  .admin-table { display: block; overflow-x: auto; }
+}

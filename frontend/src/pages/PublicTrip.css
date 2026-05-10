@@ -1,0 +1,20 @@
+.public-trip { min-height: 100vh; background: var(--bg); color: var(--text); }
+
+.public-nav { background: var(--bg2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+
+.public-hero { height: 400px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+.public-hero h1 { font-size: 42px; font-weight: 800; }
+
+.pub-stat { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+
+.public-stop { margin-bottom: 32px; }
+
+.max-w-600 { max-w: 600px; }
+.max-w-800 { max-w: 800px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mx-8 { margin-left: 32px; margin-right: 32px; }
+.my-4 { margin-top: 16px; margin-bottom: 16px; }
+.px-8 { padding-left: 32px; padding-right: 32px; }
+.py-4 { padding-top: 16px; padding-bottom: 16px; }
+
+.border-primary\/20 { border-color: rgba(108,99,255,0.2) !important; }

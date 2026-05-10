@@ -35,15 +35,8 @@ app.include_router(notes.router, prefix="/api/notes", tags=["notes"])
 app.include_router(profile.router, prefix="/api/profile", tags=["profile"])
 app.include_router(admin.router, prefix="/api/admin", tags=["admin"])
 
-frontend_path = os.path.join(os.path.dirname(__file__), "..", "frontend")
-if os.path.exists(frontend_path):
-    app.mount("/assets", StaticFiles(directory=os.path.join(frontend_path, "assets")), name="assets")
-
-    @app.get("/{full_path:path}")
-    async def serve_spa(full_path: str):
-        index_path = os.path.join(frontend_path, "index.html")
-        return FileResponse(index_path)
-
+# In development, the React dev server (Vite) handles assets and routing.
+# We only need static files if we are serving the production build.
 @app.get("/api/health")
 async def health():
     return {"status": "ok", "app": "Traveloop"}
